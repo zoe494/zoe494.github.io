@@ -9,36 +9,29 @@
 </head>
 
 <body>
-    <header>
-        <h1>Mi Portafolio de Videos</h1>
-        <p>Aunque soy una estudiante en los últimos cursos, pienso que tengo un gran potencial<br>
-            Por ello, quiero demostrar algunas de las cosas que he hecho por mi propia cuenta</p>
-        <p>Un vistazo a mis proyectos en acción</p>
-    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+    <script src="language_selector.js"></script>
+
+    <nav>
+        <a id="home" href="index.html">Home</a>
+        <a id="projects" href="projects.html">Projects</a>
+    </nav>
 
     <main>
-        <section class="video-container">
-            <h2>Video 1: Proyecto A</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/watch?v=6Klvj8FRJAg&t=1236s" title="Video 1" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+            <button id="changeLanguage" class="dropbtn">Select Language</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="selectLanguage('es')"><img src="flags/spain.png" alt="Spanish Flag"
+                        class="flag-icon">
+                    Español</a>
+                <a href="#" onclick="selectLanguage('en')"><img src="flags/uk.png" alt="English Flag" class="flag-icon">
+                    English</a>
             </div>
-
-            <h2>Video 2: Proyecto B</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/watch?v=4SUOZb3QvC0" title="Video 2" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>Hecho con ❤️ por [Tu Nombre]</p>
-    </footer>
+
 </body>
 
 </html>
