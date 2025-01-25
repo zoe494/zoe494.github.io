@@ -1,27 +1,37 @@
 let translations = {};
 
-// Cargar el CSV y convertirlo en un objeto de traducciones
+// Cargar el CSV y convertirlo en un objeto de traducciones usando PapaParse
 function loadTranslations(callback) {
     fetch("translations.csv")
         .then((response) => response.text())
         .then((text) => {
-            const rows = text.split("\n");
-            const headers = rows[0].split(",").map((header) => header.trim()); // Limpia encabezados
+            // Usar PapaParse para convertir el texto CSV en un objeto
+            Papa.parse(text, {
+                header: true, // Usar la primera fila como encabezados
+                dynamicTyping: true, // Hacer que los valores se conviertan automáticamente en tipos de datos apropiados
+                skipEmptyLines: true, // Ignorar líneas vacías
+                complete: (result) => {
 
-            // Procesar filas del CSV
-            rows.slice(1).forEach((row) => {
-                const cells = row.split(",").map((cell) => cell.trim()); // Limpia cada celda
-                const key = cells[0]; // Primera columna como clave (ID del elemento)
-                translations[key] = {};
+                    // Procesar cada fila del CSV
+                    result.data.forEach((row) => {
+                        const key = row.key; // Usar la clave (primera columna) de cada fila
+                        translations[key] = {};
 
-                headers.slice(1).forEach((lang, index) => {
-                    translations[key][lang] = cells[index + 1];
-                });
+                        // Para cada idioma (columna), asignar su valor en el objeto de traducciones
+                        Object.keys(row).forEach((lang) => {
+                            if (lang !== "key") {
+                                translations[key][lang] = row[lang];
+                            }
+                        });
+                    });
+
+                    callback(translations); // Ejecutar lógica con las traducciones cargadas
+                },
             });
-
-            callback(); // Ejecutar lógica una vez que las traducciones están cargadas
         });
+    console.log(translations);
 }
+
 
 
 // Cambiar el idioma dinámicamente
@@ -32,7 +42,7 @@ function selectLanguage(language) {
     Object.keys(translations).forEach((id) => {
         const element = document.getElementById(id);
         if (element) {
-            element.textContent = translations[id][language];
+            element.innerHTML = translations[id][language];
         }
     });
 }
