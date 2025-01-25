@@ -113,7 +113,8 @@ nav a {
     text-decoration: none;
     margin-right: 10px;
     font-size: 18px;
-
+    z-index: 1000;
+    /* Asegura que los enlaces estén por encima del fondo */
 }
 
 nav a:hover {
