@@ -13,8 +13,22 @@
     <script src="language_selector.js"></script>
 
     <nav>
-        <a id="home" href="index.html">Home</a>
-        <a id="projects" href="projects.html">Projects</a>
+        <div class="anchor-container">
+            <a id="home" href="index.html">Home</a>
+            <a id="projects" href="projects.html">Projects</a>
+            <!-- Language Dropdown -->
+            <div class="dropdown">
+                <img src="language.png" class="dropbtn"></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="selectLanguage('es')"><img src="flags/spain.png" alt="Spanish Flag"
+                            class="flag-icon">
+                        Español</a>
+                    <a href="#" onclick="selectLanguage('en')"><img src="flags/uk.png" alt="English Flag"
+                            class="flag-icon">
+                        English</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main>

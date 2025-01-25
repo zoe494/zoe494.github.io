@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio de Videos</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,24 +14,46 @@
     <script src="language_selector.js"></script>
 
     <nav>
-        <a id="home" href="index.html">Home</a>
-        <a id="projects" href="projects.html">Projects</a>
+        <div class="anchor-container">
+            <a id="home" href="index.html">Home</a>
+            <a id="projects" href="projects.html">Projects</a>
+            <!-- Language Dropdown -->
+            <div class="dropdown">
+                <img src="language.png" class="dropbtn"></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="selectLanguage('es')"><img src="flags/spain.png" alt="Spanish Flag"
+                            class="flag-icon">
+                        Español</a>
+                    <a href="#" onclick="selectLanguage('en')"><img src="flags/uk.png" alt="English Flag"
+                            class="flag-icon">
+                        English</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main>
-        <!-- Language Dropdown -->
-        <div class="dropdown">
-            <button id="changeLanguage" class="dropbtn">Select Language</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="selectLanguage('es')"><img src="flags/spain.png" alt="Spanish Flag"
-                        class="flag-icon">
-                    Español</a>
-                <a href="#" onclick="selectLanguage('en')"><img src="flags/uk.png" alt="English Flag" class="flag-icon">
-                    English</a>
-            </div>
+        <h1>¡Hola!</h1>
+        <div>Soy Zoe, una joven ingeniera y desarrolladora de software.
+            <br>Con experiencia en desarrollo de videojuegos, aplicaciones móviles y
+            programación front-end y backend, siempre estoy buscando nuevas formas de mejorar y expandir mis
+            habilidades. 
+            
+            <br><br>Soy una persona creativa, proactiva y con una fuerte ética de trabajo, ¡siempre lista para enfrentar nuevos retos!
+
+            <br><br>
+            Aquí encontrarás una muestra de mis proyectos, mis habilidades y un poco más sobre mi trayectoria
+            profesional.
         </div>
     </main>
 
+    <footer>
+        <div>
+            <p>Hecho por Zoe</p>
+            <p>Última actualización 25 Enero 2025</p>
+        </div>
+
+    </footer>
 
 </body>
 
