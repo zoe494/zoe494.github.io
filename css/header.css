@@ -1,0 +1,157 @@
+.dropbtn {
+    height: 25px;
+    width: 25px;
+    /* Centra en el eje vertical */
+}
+
+.dropdown {
+    position: absolute;
+    right: 21.5%;
+    top: 15px;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    right: 30%;
+    top: 15px;
+}
+
+
+.dropdownButtonContainer {
+    display: inline-block;
+    align-items: center;
+    border: #ffffff solid 2px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.dropdownButtonContainer:hover {
+    background-color: #d783c8;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    top: 100%;
+    right: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    position: relative;
+    width: 100%;
+    right: 0;
+    border-radius: 10px;
+    color: black;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownMenu:hover .dropdown-content {
+    display: block;
+}
+
+.flag-icon {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navButtonInside {
+    font-size: 25px;
+}
+
+nav {
+    position: relative;
+    padding-top: 20px;
+    height: 60px;
+    /* Cambiar height para ajustar la altura */
+    width: 100%;
+    background: url('../images/header6.png') repeat-x center;
+    background-size: contain;
+    /* BACKGROUND-SIZE TIENE QUE ESTAR EN CONTAIN
+      Ajusta el tamaño de la imagen */
+    background-position: center top;
+    /* Centra la imagen horizontal y verticalmente */
+}
+
+/* Estilo para los enlaces en la barra */
+nav a {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 20px;
+    z-index: 1000;
+    padding: 10px 0px;
+    letter-spacing: -1px;
+}
+
+.icon {
+    top: 15px;
+    left: 20%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo {
+    position: absolute;
+    left: 23%;
+    width: 175px;
+    top: -50px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.anchor-container {
+    text-align: right;
+    padding-right: 25%;
+
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    nav a {
+        margin-right: 10px;
+        padding: 2px;
+    }
+
+    .anchor-container {
+        padding-left: 10%;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: 10%;
+        top: 15px;
+    }
+
+    .dropdownMenu {
+        display: block;
+    }
+
+    .navButtonInside {
+        display: none;
+    }
+
+    .icon {
+        left: 10%;
+    }
+}

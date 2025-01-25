@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Twinky';
+    src: url('fonts/Twinky-Regular.eot');
+    src: url('fonts/Twinky-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Twinky-Regular.woff2') format('woff2'),
+         url('fonts/Twinky-Regular.woff') format('woff'),
+         url('fonts/Twinky-Regular.ttf')  format('truetype'),
+         url('fonts/Twinky-Regular.svg#Twinky') format('svg');
+}

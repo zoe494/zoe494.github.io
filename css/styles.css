@@ -1,0 +1,88 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  /* Usar DM Serif Display */
+  color: #333;
+}
+
+html,
+body {
+  /* Elimina el desplazamiento horizontal */
+  /*overflow-x: hidden;*/
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Estilo del cuerpo */
+body {
+  background-color: #f1e0ee;
+  line-height: 1.6;
+}
+
+/* Contenedor del GIF */
+.gif-container {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  /* Ocupa toda la altura visible */
+}
+
+/* Estilo del GIF */
+.gif-container img {
+  max-width: 50%;
+  /* Por defecto, ocupa la mitad del ancho disponible */
+  max-height: 100%;
+  /* No excede la altura de la pantalla */
+  padding: 20px;
+  /* Espaciado alrededor del GIF */
+  box-sizing: border-box;
+  /* Incluye el padding en el tamaño total */
+}
+
+main {
+  /* Espacio para la barra de navegación */
+  margin-top: 50px;
+  /* Espacio para el header */
+  padding-left: 20%;
+}
+
+main h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main div {
+  padding: 15px;
+  border: solid 2px #dcadd3;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #f1cbea;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .gif-container img {
+    max-width: 100%;
+  }
+
+  main {
+    /* Espacio para el header */
+    padding-left: 10%;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
+
+  main div {
+    width: 80%;
+    font-size: 18px;
+  }
+}

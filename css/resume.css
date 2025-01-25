@@ -1,0 +1,10 @@
+.resumePhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.ratingIcon {
+    width: 25px;
+    height: 25px;
+}

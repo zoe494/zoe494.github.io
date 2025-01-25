@@ -1,0 +1,31 @@
+footer {
+    position: relative;
+    bottom: 0px;
+    background: url('../images/footer.png') no-repeat center;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    min-height: 238px;
+    /* Asegura que no se reduzca demasiado en pantallas pequeñas */
+    height: 238px;
+    /* Mantiene la altura constante */
+    margin-top: 150px;
+}
+
+footer div {
+    padding: 20px;
+    padding-top: 50px;
+    /* Espacio alrededor del contenido */
+    color: white;
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    footer {
+        margin-top: 100px;
+        height: 168px;
+        /* Ajusta la altura según lo necesites */
+    }
+}
