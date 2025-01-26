@@ -7,22 +7,20 @@
 .dropdown {
     position: absolute;
     right: 21.5%;
-    top: 15px;
+    top: 20px;
 }
 
 .dropdownMenu {
     display: none;
     position: absolute;
     right: 30%;
-    top: 15px;
+    top: 20px;
 }
 
 
 .dropdownButtonContainer {
-    display: inline-block;
-    align-items: center;
     border: #ffffff solid 2px;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
     border-radius: 15px;
 }
 
@@ -72,6 +70,7 @@
 
 .navButtonInside {
     font-size: 25px;
+    font-family: 'Twinky', sans-serif;
 }
 
 nav {
@@ -101,7 +100,7 @@ nav a {
 }
 
 .icon {
-    top: 15px;
+    top: 20px;
     left: 20%;
     position: absolute;
     height: 40px;
@@ -112,8 +111,8 @@ nav a {
 .logo {
     position: absolute;
     left: 23%;
-    width: 175px;
-    top: -50px;
+    font-family: 'Twinky', sans-serif;
+    font-size: 25px;
 }
 
 nav a:hover {
@@ -133,18 +132,13 @@ nav a:hover {
         padding: 2px;
     }
 
-    .anchor-container {
-        padding-left: 10%;
-    }
-
     .dropdown {
-        position: absolute;
-        right: 10%;
-        top: 15px;
+        right: 8%;
     }
 
     .dropdownMenu {
         display: block;
+        right: 20%;
     }
 
     .navButtonInside {
@@ -152,6 +146,10 @@ nav a:hover {
     }
 
     .icon {
-        left: 10%;
+        left: 5%;
+    }
+
+    .logo {
+        left: 15%;
     }
 }
