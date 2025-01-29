@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="icon.png" type="image/x-icon" />
-    <title>STRAWBERRY</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
+    <title id="title">Página de Zoe</title>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
       rel="stylesheet"
@@ -16,110 +16,19 @@
   </head>
 
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
-    <script src="language_selector.js"></script>
-
-    <nav>
-      <div class="anchor-container">
-        <a class="navButton" href="index.html">
-          <img src="images/icon.png" class="icon" />
-          <span class="logo">STRAWBERRY</span>
-        </a>
-
-        <a class="navButton" href="index.html"
-          ><span id="home" class="navButtonInside"></span
-        ></a>
-        <a class="navButton" href="projects.html"
-          ><span id="projects" class="navButtonInside"></span
-        ></a>
-        <a class="navButton" href="resume.html"
-          ><span id="resume" class="navButtonInside"></span
-        ></a>
-
-        <!-- Menu dropdown in case user is on a phone -->
-        <div class="dropdownMenu">
-          <div class="dropdownButtonContainer">
-            <img src="images/menu.png" class="dropbtn" />
-
-          </div>
-
-          <div class="dropdown-content">
-            <a class="navButton" href="index.html" id="home2"></a>
-            <a class="navButton" href="projects.html" id="projects2"></a>
-            <a class="navButton" href="resume.html" id="resume2">asd</a>
-          </div>
-        </div>
-
-        <!-- Language Dropdown -->
-        <div class="dropdown">
-          <div class="dropdownButtonContainer">
-            <img src="images/traduccion.png" class="dropbtn" />
-          </div>
-
-          <div class="dropdown-content">
-            <a href="#" onclick="selectLanguage('es')"
-              ><img
-                src="flags/spain.png"
-                alt="Spanish Flag"
-                class="flag-icon"
-              />
-              Español</a
-            >
-            <a href="#" onclick="selectLanguage('en')"
-              ><img src="flags/uk.png" alt="English Flag" class="flag-icon" />
-              English</a
-            >
-            <a href="#" onclick="selectLanguage('fr')"
-              ><img
-                src="flags/france.png"
-                alt="French Flag"
-                class="flag-icon"
-              />
-              Français</a
-            >
-            <a href="#" onclick="selectLanguage('pt')"
-              ><img
-                src="flags/portugal.png"
-                alt="Portuguese Flag"
-                class="flag-icon"
-              />
-              Português</a
-            >
-            <a href="#" onclick="selectLanguage('zh')"
-              ><img
-                src="flags/china.png"
-                alt="Chinese Flag"
-                class="flag-icon"
-              />
-              中文</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div id="header"></div>
 
     <main>
-      <h1 id="hello">¡Hola!</h1>
-      <div id="aboutMe">
-        Soy Zoe, una joven ingeniera y desarrolladora de software. <br />Con
-        experiencia en desarrollo de videojuegos, aplicaciones móviles y
-        programación front-end y backend, siempre estoy buscando nuevas formas
-        de mejorar y expandir mis habilidades.
-
-        <br /><br />Soy una persona creativa, proactiva y con una fuerte ética
-        de trabajo, ¡siempre lista para enfrentar nuevos retos!
-
-        <br /><br />
-        Aquí encontrarás una muestra de mis proyectos, mis habilidades y un poco
-        más sobre mi trayectoria profesional.
-      </div>
+      <h1 id="hello"></h1>
+      <div id="aboutMe" class="roundedBox"></div>
     </main>
 
-    <footer>
-      <div>
-        <p id="author">Hecho por Zoe</p>
-        <p id="lastUpdate">Última actualización 25 Enero 2025</p>
-      </div>
-    </footer>
+    <div id="footer"></div>
+
+    <script src="js/cookie_manager.js"></script>
+    <script src="js/html_resources.js"></script>
+    <script src="js/theme_selector.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+    <script src="js/language_selector.js"></script>
   </body>
 </html>

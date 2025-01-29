@@ -1,0 +1,18 @@
+.grid2columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid2columns a {
+    text-decoration: none;
+    color: #333;
+}
+
+.roundedBox h3 {
+    margin: 0;
+}
+
+.roundedBox:hover h3 {
+    text-decoration: underline;
+}

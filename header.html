@@ -1,0 +1,91 @@
+<header>
+  <nav>
+    <div class="anchor-container">
+      <!--
+      <a class="navButton" href="index.html">
+        <img src="images/icon.png" class="icon" />
+        <span class="logo">STRAWBERRY</span>
+      </a>
+      -->
+
+      <a class="navButton" href="index.html"
+        ><span id="home" class="navButtonText"></span
+      ></a>
+      <a class="navButton" href="projects.html"
+        ><span id="projects" class="navButtonText"></span
+      ></a>
+      <!--
+      <a class="navButton" href="resume.html"
+        ><span id="resume" class="navButtonInside"></span
+      ></a>
+      -->
+
+      <!-- Menu dropdown in case user is on a phone -->
+      <div class="menuDropdown">
+        <div class="dropdownIconDiv">
+          <img src="images/menu.png" class="dropbtn" />
+        </div>
+
+        <div class="menuDropdownContent">
+          <a class="navButton" href="index.html" id="home2"></a>
+          <a class="navButton" href="projects.html" id="projects2"></a>
+          <!--
+          <a class="navButton" href="resume.html" id="resume2">asd</a>
+          -->
+        </div>
+      </div>
+
+      <!-- Theme Dropdown -->
+      <div class="themeDropdown">
+        <div class="dropdownIconDiv">
+          <img src="images/art.png" class="dropbtn" />
+        </div>
+
+        <div class="themeDropdownContent">
+          <a href="#" onclick="selectTheme('fresh')"
+            ><div class="themeColor" id="freshThemeColor"></div>
+            <span id="freshTheme"></a
+          >
+          <a href="#" onclick="selectTheme('sweet')"
+            ><div class="themeColor" id="sweetThemeColor"></div>
+            <span id="sweetTheme"></a
+          >
+        </div>
+      </div>
+
+      <!-- Language Dropdown -->
+      <div class="translationDropdown">
+        <div class="dropdownIconDiv">
+          <img src="images/traduccion.png" class="dropbtn" />
+        </div>
+
+        <div class="translationDropdownContent">
+          <a href="#" onclick="selectLanguage('es')"
+            ><img src="flags/spain.png" alt="Spanish Flag" class="flag-icon" />
+            Español</a
+          >
+          <a href="#" onclick="selectLanguage('en')"
+            ><img src="flags/uk.png" alt="English Flag" class="flag-icon" />
+            English</a
+          >
+          <a href="#" onclick="selectLanguage('fr')"
+            ><img src="flags/france.png" alt="French Flag" class="flag-icon" />
+            Français</a
+          >
+          <a href="#" onclick="selectLanguage('pt')"
+            ><img
+              src="flags/portugal.png"
+              alt="Portuguese Flag"
+              class="flag-icon"
+            />
+            Português</a
+          >
+          <a href="#" onclick="selectLanguage('zh')"
+            ><img src="flags/china.png" alt="Chinese Flag" class="flag-icon" />
+            中文</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,39 +1,46 @@
+.anchor-container {
+    padding: 0 20vw;
+    display: flex;
+    align-items: center;
+}
+
 .dropbtn {
     height: 25px;
     width: 25px;
-    /* Centra en el eje vertical */
 }
 
-.dropdown {
-    position: absolute;
-    right: 21.5%;
-    top: 20px;
+.themeDropdown {
+    margin-left: auto;
+    margin-right: 2%;
 }
 
-.dropdownMenu {
+.menuDropdown {
     display: none;
-    position: absolute;
-    right: 30%;
-    top: 20px;
 }
 
-
-.dropdownButtonContainer {
+.dropdownIconDiv {
     border: #ffffff solid 2px;
     padding: 5px 5px 0px 5px;
     border-radius: 15px;
 }
 
-.dropdownButtonContainer:hover {
-    background-color: #d783c8;
+.dropdownIconDiv:hover {
     cursor: pointer;
 }
 
-.dropdown-content {
-    display: none;
-    top: 100%;
-    right: 0;
+html[data-theme="fresh"] .dropdownIconDiv:hover {
+    background-color: #629181;
+}
+
+html[data-theme="sweet"] .dropdownIconDiv:hover {
+    background-color: #d783c8;
+}
+
+.translationDropdownContent,
+.themeDropdownContent,
+.menuDropdownContent {
     position: absolute;
+    display: none;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -41,10 +48,19 @@
     border-radius: 10px;
 }
 
-.dropdown-content a {
-    position: relative;
-    width: 100%;
+.translationDropdownContent {
+    right: 20%;
+}
+
+.themeDropdownContent {
+    right: 24.5%;
+}
+
+.translationDropdownContent a,
+.themeDropdownContent a,
+.menuDropdownContent a {
     right: 0;
+    width: 100%;
     border-radius: 10px;
     color: black;
     padding: 8px 10px;
@@ -53,32 +69,59 @@
 }
 
 
-.dropdown:hover .dropdown-content {
+.translationDropdown:hover .translationDropdownContent {
     display: block;
 }
 
-.dropdownMenu:hover .dropdown-content {
+.themeDropdown:hover .themeDropdownContent {
     display: block;
 }
 
-.flag-icon {
+.menuDropdown:hover .menuDropdownContent {
+    display: block;
+}
+
+#freshThemeColor {
+    background-color: #81beaa;
+}
+
+#sweetThemeColor {
+    background-color: #d783c8;
+}
+
+.flag-icon,
+.themeColor {
     border-radius: 50%;
     width: 20px;
     height: 20px;
     margin-right: 10px;
 }
 
-.navButtonInside {
+.navButtonText {
     font-size: 25px;
+}
+
+html[data-theme="fresh"] .navButtonText {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html[data-theme="sweet"] .navButtonText {
     font-family: 'Twinky', sans-serif;
 }
 
 nav {
-    position: relative;
-    padding-top: 20px;
+    padding: 5px 0;
     height: 60px;
     /* Cambiar height para ajustar la altura */
     width: 100%;
+    /* Centra la imagen horizontal y verticalmente */
+}
+
+html[data-theme="fresh"] nav {
+    background-color: #81beaa;
+}
+
+html[data-theme="sweet"] nav {
     background: url('../images/header6.png') repeat-x center;
     background-size: contain;
     /* BACKGROUND-SIZE TIENE QUE ESTAR EN CONTAIN
@@ -102,16 +145,14 @@ nav a {
 .icon {
     top: 20px;
     left: 20%;
-    position: absolute;
     height: 40px;
     width: 40px;
     margin-right: 10px;
 }
 
 .logo {
-    position: absolute;
     left: 23%;
-    font-family: 'Twinky', sans-serif;
+    font-family: sans-serif;
     font-size: 25px;
 }
 
@@ -119,37 +160,35 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.anchor-container {
-    text-align: right;
-    padding-right: 25%;
-
-}
-
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
+    .anchor-container {
+        padding: 0 10vw;
+        margin-top: 10px;
+    }
+
+    .translationDropdownContent {
+        right: 10%;
+    }
+
+
+    .themeDropdown {
+        margin-right: 4%;
+    }
+
+    .themeDropdownContent {
+        right: 24%;
+    }
+
     nav a {
-        margin-right: 10px;
-        padding: 2px;
+        margin-right: 0px;
     }
 
-    .dropdown {
-        right: 8%;
-    }
-
-    .dropdownMenu {
+    .menuDropdown {
         display: block;
-        right: 20%;
     }
 
-    .navButtonInside {
+    .navButtonText {
         display: none;
-    }
-
-    .icon {
-        left: 5%;
-    }
-
-    .logo {
-        left: 15%;
     }
 }
