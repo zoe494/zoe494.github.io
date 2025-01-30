@@ -1,0 +1,40 @@
+.paragraph {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.paragraph a {
+    color: #333;
+}
+
+/* Contenedor del GIF */
+.gif-container {
+    display: block;
+    text-align: center;
+}
+
+/* Estilo del GIF */
+.gif-container img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.roundedBox {
+    min-height: 200px;
+    padding-bottom: 60px;
+    padding: 40px;
+    margin: 80px 0;
+    font-size: 16px;
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .roundedBox {
+        padding: 10px;
+        margin: 40px 0;
+    }
+}

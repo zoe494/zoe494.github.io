@@ -9,10 +9,23 @@
     color: #333;
 }
 
+
+.roundedBox {
+    min-height: 200px;
+    padding-bottom: 60px;
+}
+
 .roundedBox h3 {
     margin: 0;
 }
 
 .roundedBox:hover h3 {
     text-decoration: underline;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .grid2columns {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

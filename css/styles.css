@@ -33,28 +33,6 @@ main {
   padding: 0 20%;
 }
 
-/* Contenedor del GIF */
-.gif-container {
-  display: flex;
-  justify-content: center;
-  /* Centra horizontalmente */
-  align-items: center;
-  /* Centra verticalmente */
-  /* Ocupa toda la altura visible */
-}
-
-/* Estilo del GIF */
-.gif-container img {
-  max-width: 50%;
-  /* Por defecto, ocupa la mitad del ancho disponible */
-  max-height: 100%;
-  /* No excede la altura de la pantalla */
-  padding: 20px;
-  /* Espaciado alrededor del GIF */
-  box-sizing: border-box;
-  /* Incluye el padding en el tamaño total */
-}
-
 
 main h1 {
   font-size: 40px;
