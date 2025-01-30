@@ -9,6 +9,9 @@
     color: #333;
 }
 
+html[data-theme="dark"] .grid2columns a {
+    color: #fff;
+}
 
 .roundedBox {
     min-height: 200px;

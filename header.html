@@ -14,6 +14,9 @@
       <a class="navButton" href="projects.html"
         ><span id="projects" class="navButtonText"></span
       ></a>
+      <a class="navButton" href="contact.html"
+        ><span id="contact" class="navButtonText"></span
+      ></a>
       <!--
       <a class="navButton" href="resume.html"
         ><span id="resume" class="navButtonInside"></span
@@ -23,12 +26,19 @@
       <!-- Menu dropdown in case user is on a phone -->
       <div class="menuDropdown">
         <div class="dropdownIconDiv">
-          <img src="images/menu.png" class="dropbtn" />
+          <div class="menuDropdownIcon"></div>
         </div>
 
         <div class="menuDropdownContent">
-          <a class="navButton" href="index.html" id="home2"></a>
-          <a class="navButton" href="projects.html" id="projects2"></a>
+          <a class="navButton" href="index.html"
+            ><span class="dropdownText" id="home2"></span
+          ></a>
+          <a class="navButton" href="projects.html"
+            ><span class="dropdownText" id="projects2"></span
+          ></a>
+          <a class="navButton" href="contact.html"
+            ><span class="dropdownText" id="contact2"></span
+          ></a>
           <!--
           <a class="navButton" href="resume.html" id="resume2">asd</a>
           -->
@@ -38,39 +48,47 @@
       <!-- Theme Dropdown -->
       <div class="themeDropdown">
         <div class="dropdownIconDiv">
-          <img src="images/art.png" class="dropbtn" />
+          <div class="themeDropdownIcon"></div>
         </div>
 
         <div class="themeDropdownContent">
+          <a href="#" onclick="selectTheme('light')"
+            ><div class="themeColor" id="lightThemeColor"></div>
+            <span id="lightTheme" class="dropdownText"></span
+          ></a>
+          <a href="#" onclick="selectTheme('dark')"
+            ><div class="themeColor" id="darkThemeColor"></div>
+            <span id="darkTheme" class="dropdownText"></span
+          ></a>
           <a href="#" onclick="selectTheme('fresh')"
             ><div class="themeColor" id="freshThemeColor"></div>
-            <span id="freshTheme"></a
-          >
+            <span id="freshTheme" class="dropdownText"></span
+          ></a>
           <a href="#" onclick="selectTheme('sweet')"
             ><div class="themeColor" id="sweetThemeColor"></div>
-            <span id="sweetTheme"></a
-          >
+            <span id="sweetTheme" class="dropdownText"></span
+          ></a>
         </div>
       </div>
 
       <!-- Language Dropdown -->
       <div class="translationDropdown">
         <div class="dropdownIconDiv">
-          <img src="images/traduccion.png" class="dropbtn" />
+          <div class="translationDropdownIcon"></div>
         </div>
 
         <div class="translationDropdownContent">
           <a href="#" onclick="selectLanguage('es')"
             ><img src="flags/spain.png" alt="Spanish Flag" class="flag-icon" />
-            Español</a
+            <span class="dropdownText">Español</span></a
           >
           <a href="#" onclick="selectLanguage('en')"
             ><img src="flags/uk.png" alt="English Flag" class="flag-icon" />
-            English</a
+            <span class="dropdownText">English</span></a
           >
           <a href="#" onclick="selectLanguage('fr')"
             ><img src="flags/france.png" alt="French Flag" class="flag-icon" />
-            Français</a
+            <span class="dropdownText">Français</span></a
           >
           <a href="#" onclick="selectLanguage('pt')"
             ><img
@@ -78,11 +96,11 @@
               alt="Portuguese Flag"
               class="flag-icon"
             />
-            Português</a
+            <span class="dropdownText">Português</span></a
           >
           <a href="#" onclick="selectLanguage('zh')"
             ><img src="flags/china.png" alt="Chinese Flag" class="flag-icon" />
-            中文</a
+            <span class="dropdownText">中文</span></a
           >
         </div>
       </div>

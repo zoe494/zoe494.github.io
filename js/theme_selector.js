@@ -8,7 +8,11 @@ function selectTheme(theme) {
 document.addEventListener("DOMContentLoaded", () => {
   let savedTheme = getCookie("theme");
   if (!savedTheme) {
-    savedTheme = "fresh"; // Default to fresh theme if no theme cookie is found
+    //Si no se encuentra la cookie, se verifica si el sistema operativo tiene un tema oscuro
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    savedTheme = prefersDarkScheme ? "dark" : "light";
     setCookie("theme", savedTheme);
   }
   selectTheme(savedTheme);
