@@ -5,10 +5,10 @@ function selectTheme(theme) {
   console.log("Theme selected: " + theme);
 }
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   let savedTheme = getCookie("theme");
   if (!savedTheme) {
-    // Si no se encuentra la cookie, se verifica si el sistema operativo tiene un tema oscuro
+    //Si no se encuentra la cookie, se verifica si el sistema operativo tiene un tema oscuro
     const prefersDarkScheme = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
@@ -16,4 +16,4 @@ window.onload = () => {
     setCookie("theme", savedTheme);
   }
   selectTheme(savedTheme);
-};
+});
