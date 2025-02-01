@@ -43,9 +43,8 @@ function selectLanguage(language) {
     }
   });
 }
-
 // Cargar las traducciones al iniciar
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
   loadTranslations(() => {
     let savedLanguage = getCookie("language");
     if (!savedLanguage) {
@@ -54,4 +53,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     selectLanguage(savedLanguage);
   });
-});
+};
